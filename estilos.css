@@ -1,0 +1,222 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* ================= HEADER ================= */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:linear-gradient(135deg,#00c853,#00e676);
+    color:white;
+    position:sticky;
+    top:0;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:bold;
+}
+
+.logo img{
+    height:45px;
+}
+
+/* MENU */
+.menu a{
+    margin:0 10px;
+    color:white;
+    text-decoration:none;
+    position:relative;
+}
+
+.menu a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    background:white;
+    left:0;
+    bottom:-4px;
+    transition:.3s;
+}
+
+.menu a:hover::after{
+    width:100%;
+}
+
+/* ACCIONES */
+.acciones input{
+    padding:5px 10px;
+    border-radius:15px;
+    border:none;
+}
+
+.btn-carrito{
+    margin-left:5px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-carrito:hover{
+    transform:scale(1.1);
+}
+
+/* ================= HERO ================= */
+.hero{
+    height:60vh;
+    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+               url("imagenes/tienda.png") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+/* CAJA HERO */
+.caja-hero{
+    background: rgba(0,0,0,0.5);
+    padding: 25px 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    max-width: 600px;
+}
+
+/* TEXTO HERO */
+.hero h2{
+    font-size:2.5rem;
+    font-weight:bold;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-top:10px;
+    text-shadow:1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* ================= ACORDEÓN ================= */
+.carrusel-acordeon{
+    background:#111;
+    padding:30px;
+}
+
+.galeria-contenedor{
+    display:flex;
+    gap:10px;
+    max-width:1100px;
+    margin:auto;
+    height:350px;
+}
+
+.tarjeta{
+    flex:1;
+    border-radius:15px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.tarjeta:hover{
+    flex:3;
+}
+
+.contenido{
+    width:100%;
+    padding:15px;
+    background:linear-gradient(to top, rgba(0,0,0,.8), transparent);
+    color:white;
+    opacity:0;
+    transform:translateY(10px);
+    transition:.3s;
+}
+
+.tarjeta:hover .contenido{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ================= PRODUCTOS ================= */
+.productos{
+    padding:30px;
+    text-align:center;
+}
+
+.grid{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:180px;
+    background:white;
+    padding:10px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    border-radius:6px;
+}
+
+/* ================= NOSOTROS ================= */
+.nosotros{
+    padding:40px;
+    text-align:center;
+}
+
+/* ================= CONTACTO ================= */
+.contacto{
+    padding:40px;
+    text-align:center;
+}
+
+.contacto-form{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    max-width:300px;
+    margin:auto;
+}
+
+.contacto-form input,
+.contacto-form textarea{
+    padding:8px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
